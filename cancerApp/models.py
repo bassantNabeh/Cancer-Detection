@@ -7,9 +7,11 @@ from django.db import models
 class Doctor(AbstractUser):
     username = models.CharField(max_length=20, unique=True)
     password = models.CharField(max_length=15)
-    mail = models.EmailField(max_length=30)
-    phone = models.CharField(max_length=11)
-    address = models.CharField(max_length=20)
 
 
+
+class Statistics(models.Model):
+    patient_id = models.CharField(max_length=20, default='0')
+    username = models.CharField(max_length=20)
+    label = models.CharField(max_length=20)
 
